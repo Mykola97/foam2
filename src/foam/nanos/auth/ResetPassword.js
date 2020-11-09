@@ -116,7 +116,7 @@ foam.CLASS({
         });
         this.resetPasswordToken.processToken(null, user, this.token)
         .then((_) => {
-          this.stack.push({ class: 'foam.u2.view.LoginView', mode_: 'SignIn' }, this);
+          this.stack.push({ class: 'net.nanopay.sme.ui.SuccessPasswordView' }, this);
           this.notify(this.SUCCESS_MSG, '', this.LogLevel.INFO, true);
         }).catch((err) => {
           this.notify(err.message, '', this.LogLevel.ERROR, true);
